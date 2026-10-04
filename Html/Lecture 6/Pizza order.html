@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Da pizza hub </title>
+</head>
+
+<body>
+    <h1>Da pizza hub's Delivery</h1>
+    <h2>Online order Form</h2>
+    *required fields
+    <form action="Thanks.html">
+        <fieldset>
+            <legend>Customer Details </legend>
+            
+                <label>*Name :</label>
+                <input type="text" required>
+                <br>
+                <label>*Address :</label>
+                <input type="text" required>
+                <br>
+                <label>*Town/city :</label>
+                <input type="text" required>
+                <br>
+                <label>*Pincode :</label>
+                <input type="number" minlength="6" maxlength="6" required>
+                <br>
+                <label>*Tel :</label>
+                <input type="number" minlength="10" required min="0" required>
+                <br>
+                <label>*Email :</label>
+                <input type="email" required>
+        </fieldset>
+    
+ 
+        <fieldset>
+            <legend>Topping *</legend>
+           
+            <input type="radio" name="Topping">
+            <label>Margherita</label>
+            <br>
+            <input type="radio" name="Topping">
+            <label>Four Seasons</label>
+            <br>
+            <input type="radio" name="Topping">
+            <label>Meat Feast</label>
+        </fieldset>
+   
+  
+        <fieldset>
+            <legend>Size *</legend>
+           
+            <input type="radio" required name="Size">
+            <label>Small</label>
+            <br>
+            <input type="radio" required name="Size" required>
+            <label>Medium</label>
+            <br>
+            <input type="radio" required name="Size" required>
+            <label>Large</label>
+        </fieldset>
+    
+    
+        <fieldset>
+            <legend>Extras</legend>
+           
+           <input type="checkbox" name="" id="">
+           <label>Mushrooms</label>
+           <br>
+           <input type="checkbox" name="" id="">
+           <label>Green Peppers</label>
+           <Br>
+           <input type="checkbox" name="" id="">
+           <label>Anchovies</label>
+           <br>
+           <input type="checkbox" name="" id="">
+           <label>Extra Cheese</label>
+        </fieldset>
+    
+   
+        <fieldset>
+            <legend>Delivery</legend>
+            <label>Preffered Delivery time :</label>
+            <input type="time" >
+            <br><br>
+            <label>Delivery instructions :</label>
+            <br>
+            <textarea></textarea> 
+            <br>
+            <button type="submit">Submit Form</button>
+           
+        </fieldset>
+
+    </form>
+  
+
+
+
+</body>
+
+</html>

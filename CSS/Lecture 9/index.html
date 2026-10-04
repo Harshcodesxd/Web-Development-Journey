@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <link rel="stylesheet" href="Index.css">
+    <!--    Internal CSS  -->
+    <style>
+        h2 {
+            color: rgb(7, 255, 214);
+        }
+    </style>
+</head>
+
+<!-- Specificity = Inline CSS > id > class > Element>*(universal selector) -->
+
+
+<body>
+    <h1 style="color: rgb(185, 23, 99);">CSS = Cascading style sheet</h1>
+    <br>
+    <h2>Types Of CSS</h2>
+    <ul>
+        <li type="circle">Inline CSS</li>
+        <li type="circle">Internal CSS</li>
+        <li type="circle">External CSS</li>
+    </ul>
+    <section>
+        <h3>OPEN ME 😅!</h3>
+        <details>
+            <summary>Inline CSS</summary>
+            <p>Inline element = 1 hi line mai likhne wali CSS (above h1 is example for that) [We shouldn't use inline
+                css it makes code bad, have to repeat code many times if it's a big file]</p>
+        </details>
+        <details>
+            <summary>Internal CSS</summary>
+            <p>Internal CSS - Head tag ke andar with the help of stlye tag (Example In style) (Index.html should be in
+                .css file it makes the .html file bigger if we type all code in 1 file) </p>
+        </details>
+
+        <details>
+            <summary>External CSS (Best)</summary>
+            <p>External CSS(Daddy of both Internal CSS and inline CSS) file create banate hai (.css) we need to link
+                both files, Optimises code better than both</p>
+        </details>
+    </section>
+
+    <h1>Selectors</h1>
+    <ul>
+        <li type="disc">Class</li>
+        Jab bhot sari chizo ko same properties deni hoti h tab class use krte h (Common property) k liye 1 time
+        <br><br>
+
+        <h2>Real-Life Analogy</h2>
+        <ul>
+            <li type="circle">"All students stand up." → <strong>*</strong></li>
+            <li type="circle">"All boys stand up." → <strong>.boys</strong></li>
+            <li type="circle">"Rahul stand up." → <strong>#rahul</strong></li>
+            <li type="circle">"All students in Class 10 stand up." →<strong> .class10 .student</strong></li>
+        </ul>
+
+        <h1>Combinator = elements k bich ka relation</h1>
+
+        <details>
+            <summary>
+                Decendant Combinator </summary>
+            <p>highest property will apply on all, for all childrens that property will act like father of them</p>
+        </details>
+        <!-- Example for  Descendant Combinator -->
+        <div >
+        <br>
+            hello
+            <br>
+            <a href="">Hi</a>
+            <P>Hi a</P>
+            <P>Hi b</P>
+            <P>Hi c</P>
+            <!-- This is not child of Div tag thats why his color won't change if we use div > p property (kyu ki ye section k ander h) -->
+             <section> 
+            <P id="hid" >Hi d</P>
+            </section>   
+        </div>
+
+<a href="https://www.w3schools.com/css/css_pseudo_classes.asp" target="_blank">Pseudo Class -</a>
+
+<p>Interactive Pseudo-classes
+Interactive pseudo-classes apply styles based on user interaction:
+<br><br>
+
+:hover - <span>When mouse is over an element</span><br>
+:focus - When an element has focus<br>
+:active - When an element is being activated<br>
+:link - Unvisited links<br>
+:visited - Visited links<br>
+<hr>
+
+Structural Pseudo-classes :<br><br>
+Structural pseudo-classes select elements based on their position in the document tree:<br>
+:first-child - First child of a parent<br>
+:last-child - Last child of a parent<br>
+:nth-child(n) - The nth child of a parent<br>
+:lang() - Elements with a specific language
+<br></p>
+
+
+        <br><br>
+        <section>
+            <form action="Thanks.html">
+                <fieldset>
+                    <legend style="color: aquamarine;">Customer Details </legend>
+
+                    <label class="label">*Name :</label>
+                    <input type="text">
+                    <br>
+                    <label class="label2">*Address :</label>
+                    <input type="text">
+                    <br>
+                    <label class="label">*Town/city :</label>
+                    <input type="text">
+                    <br>
+                    <label class="label2">*Pincode :</label>
+                    <input type="number" minlength="6" maxlength="6">
+                    <br>
+                    <label class="label">*Tel :</label>
+                    <input type="number" minlength="10" required min="0">
+                    <br>
+                    <label class="label2">*Email :</label>
+                    <input type="email">
+                </fieldset>
+
+
+                <fieldset>
+                    <legend>Topping *</legend>
+
+                    <input type="radio" name="Topping">
+                    <label>Margherita</label>
+                    <br>
+                    <input type="radio" name="Topping">
+                    <label>Four Seasons</label>
+                    <br>
+                    <input type="radio" name="Topping">
+                    <label>Meat Feast</label>
+                </fieldset>
+
+
+                <fieldset>
+                    <legend>Size *</legend>
+
+                    <input type="radio" required name="Size">
+                    <label>Small</label>
+                    <br>
+                    <input type="radio" required name="Size">
+                    <label>Medium</label>
+                    <br>
+                    <input type="radio" required name="Size">
+                    <label>Large</label>
+                </fieldset>
+
+
+                <fieldset>
+                    <legend>Extras</legend>
+
+                    <input type="checkbox" name="" id="">
+                    <label>Mushrooms</label>
+                    <br>
+                    <input type="checkbox" name="" id="">
+                    <label>Green Peppers</label>
+                    <Br>
+                    <input type="checkbox" name="" id="">
+                    <label>Anchovies</label>
+                    <br>
+                    <input type="checkbox" name="" id="">
+                    <label>Extra Cheese</label>
+                </fieldset>
+
+
+                <fieldset>
+                    <legend>Delivery</legend>
+                    <label>Preffered Delivery time :</label>
+                    <input type="time">
+                    <br><br>
+                    <label>Delivery instructions :</label>
+                    <br>
+                    <textarea></textarea>
+                    <br>
+                    <button type="submit">Submit Form</button>
+
+                </fieldset>
+
+            </form>
+        </section>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    border: 2px solid brown;
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+
+    justify-content: start;
+    /* justify-content: end; */
+    /* justify-content: space-between; */
+    /* justify-content: space-evenly; */
+    /* justify-content: space-around; */
+    /* justify-content: center; */
+
+
+/* for 1 row or col we use align-items */
+    align-items: center;
+    /*   align-items: end; */
+    /* align-items: start */;
+
+
+    gap: 10px;
+
+
+    padding-left: 40px;
+    flex-wrap: wrap;
+
+/* for multiple rows or cols we use align-content */
+    align-content: center;
+    /* align-content: space-around; */
+    /* align-content: space-between; */
+    /* align-content: space-evenly; */
+
+
+}
+
+.card {
+    width: 100px;
+    height: 100px;
+    background-color: chocolate;
+    border: 1px solid black;
+
+
+
+}

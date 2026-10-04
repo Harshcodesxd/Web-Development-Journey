@@ -1,0 +1,53 @@
+/* (*) Universal Selector */
+/* If We use id = # in CSS before id For speical Use*/
+/* Class = .xyz class For Common use*/
+
+
+
+
+legend{
+    color: rgb(82, 32, 219);
+}
+.label{
+    color: #3366cc;
+}
+
+.label2{
+    color:#3366cc;
+} 
+
+ #harsh{
+    color: #8400ff;
+}
+* {
+    background-color: rgb(255, 213, 151); 
+} 
+ div > p{
+    color: #ff0000;
+}
+p+p {
+    color: #00e1ff;
+}
+h1:hover{
+    background-color: #07ffd6;
+}
+#hid{
+   color: #ff0707;
+}
+li:nth-child(2n){
+    color: #9c0633;
+}
+h1::before{
+    content:"Hi ";
+}
+h1::first-letter{
+    color: #00c2dba1;
+} 
+h1::selection{
+color: #2600ff8a;
+background-color: #2600ffa9;
+}
+
+
+
+

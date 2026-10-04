@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.box {
+    height: 300px;
+    width: 300px;
+    background-color: aqua;
+    transition-duration: 2s;
+    transition-property: all;
+/*     transition-timing-function: ease-in;
+    transform: translate(200px, 200px) scale(1.1); */
+
+}
+
+.box:hover {
+    background-color: blueviolet;
+    width: 100vh;
+}
+
+
+/* animation: name duration timing-function delay interation-count direct fill mode */
+.ani{
+    animation-name:  harsh;
+    animation-duration: 3s;
+    animation-iteration-count: 2;
+    height: 300px;
+    width: 300px;
+    background-color: aqua;
+    margin-top: 40px;
+}
+
+@keyframes harsh {
+    0%{
+    background-color: aliceblue;
+    width: 0px;
+    }
+    25%{
+     background-color: black;
+     width: 75px;
+      }
+    50%{
+     background-color: green;
+     width: 50px;
+    }
+    75%{
+     background-color: yellow;
+     width: 75px;
+    }
+    100%{
+     background-color: rgb(255, 0, 0);
+     transform: translate(200px, 100px) scale(1.2);
+     width: 1000px;
+    }
+}

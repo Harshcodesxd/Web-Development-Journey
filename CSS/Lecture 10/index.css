@@ -1,0 +1,43 @@
+#harsh{
+   font-family: "Roboto Slab", serif;
+   font-size: 35px;
+}
+
+#dyna{
+   font-family: "DynaPuff", system-ui;
+}
+
+#weight{
+   font-weight: 100;
+}
+
+#italic{
+   font-style: italic;
+}
+#smallcap{
+    font-variant: small-caps;
+}
+
+#lineheight{
+    line-height: 2; 
+    letter-spacing: 1px;
+    word-spacing: 10px;
+}
+#underline{
+  text-align: center;
+  text-decoration: underline rgb(255, 0, 64) dashed;
+}
+#wavy{
+    text-decoration: underline wavy rgb(7, 185, 255);
+    text-transform:  capitalize;
+}
+*{
+    background-color: rgb(250, 255, 179);
+}
+#shadow{
+    color: rgba(19, 212, 160, 0.9);
+    text-shadow: -1px -1px 10px red;
+}
+
+
+

@@ -1,0 +1,70 @@
+/* h1{
+    background-color: rgba(165, 42, 42, 0.527) ;
+    color: aqua;
+} */
+#wrapper {
+    /*      background: linear-gradient(150deg,green,rgb(175, 190, 255),orange);
+
+    background: radial-gradient(circle,red,green);
+    
+    background-image: conic-gradient(red, rgb(255, 115, 0), green);
+
+
+    /*   background-image: url(https://images.ctfassets.net/hrltx12pl8hq/28ECAQiPJZ78hxatLTa7Ts/2f695d869736ae3b0de3e56ceaca3958/free-nature-images.jpg?fit=fill&w=1200&h=630);
+  background-repeat: no-repeat; */
+
+    height: 1000px;
+}
+
+.redborder {
+    border: 1px solid black;
+
+}
+
+h1 {
+    /*  padding-left: 200px; */
+
+    text-align: center;
+    margin: auto;
+}
+
+p {
+    padding: 40px;
+
+    /* padding-top: 40px;
+    padding-bottom: 40px;
+    padding-right: 40px; */
+    margin-bottom: 10px;
+}
+
+span {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+}
+
+#cutex {
+    padding: 4px;
+    box-sizing: border-box;
+     margin-bottom: 10px;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+
+}
+.box{
+    border: 2px solid blue;
+    
+}
+.box1{
+box-sizing: border-box;
+}
+.box2{
+background-color: aqua;
+border: 2px solid blue;
+height: 200px;
+}

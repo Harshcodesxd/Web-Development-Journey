@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Tables</title>
+    <style>
+        table,
+        tr,
+        td,
+        th,
+        tfoot {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+
+
+        <h1>1.Tables</h1>
+        <table>
+            <tr>
+                <td>Maths</td>
+                <td>Science</td>
+                <td>Hindi</td>
+            </tr>
+            <tr>
+                <td>35</td>
+                <td>07</td>
+                <td>30</td>
+            </tr>
+        </table>
+
+
+    </div>
+    <div>
+        <h2>2.Students score</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Student/subject</th>
+                    <th>Maths</th>
+                    <th>Science</th>
+                    <th>English</th>
+                    <th>Computer</th>
+            </thead>
+            <tbody>
+
+                </tr>
+                <tr>
+                    <td>Anu</td>
+                    <td>90</td>
+                    <td>59</td>
+                    <td>50</td>
+                    <td>96</td>
+                </tr>
+                <tr>
+                    <td>Harsh</td>
+                    <td>50</td>
+                    <td>70</td>
+                    <td>80</td>
+                    <td>90</td>
+                </tr>
+                <tr>
+                    <td>bhavya</td>
+                    <td>65</td>
+                    <td>90</td>
+                    <td>99</td>
+                    <td>75</td>
+                </tr>
+                <tr>
+                    <td>Keshav</td>
+                    <td>50</td>
+                    <td>80</td>
+                    <td>40</td>
+                    <td>33</td>
+                </tr>
+                <tr>
+                    <td>Ansh</td>
+                    <td>55</td>
+                    <td>66</td>
+                    <td>77</td>
+                    <td>88</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <th>Total</th>
+                <th>310</th>
+                <th>365</th>
+                <th>346</th>
+                <th>382</th>
+            </tfoot>
+
+            <caption>Student Marks</caption>
+        </table>
+    </div>
+
+
+
+    <div>
+        <h2>3.Practise Table</h2>
+        <table>
+            <thead>
+                <th>Name</th>
+                <th>Jod title</th>
+                <th>Email Address</th>
+            </thead>
+            <tbody>
+                <td>Anna Fitzgerald</td>
+                <td>Staff Writer</td>
+                <td>xyz@company.com</td>
+                <tr>
+                    <td>John Smith</td>
+                    <td>Marketing Manager</td>
+                    <td>abc@company.com</td>
+                </tr>
+                <tr>
+                    <td>Zendaya Grace</td>
+                    <td>CEO</td>
+                    <td>zyx@company.com</td>
+                </tr>
+            </tbody>
+            <tr>
+                <td>Harsh</td>
+                <td>Manager</td>
+                <td>hxd@gmail.com</td>
+            </tr>
+            <caption>Jod applications</caption>
+        </table>
+
+
+    </div>
+
+    <div>
+        <h2>4.Row Span and Colspan</h2>
+        <!-- Colspan - we can merge left right data cells -->
+        <!-- Rowspan - we can merge Top bottom data cells -->
+        <table>
+            <tr>
+                <td rowspan="2"></td>
+                <th colspan="2">Average</th>
+                <th rowspan="2">Red Eyes</th>
+            </tr>
+
+
+            <tr>
+                <th>Height</th>
+                <th>Weight</th>
+
+            </tr>
+            <tr>
+                <th>Males</th>
+                <td>1.9</td>
+                <td>0.003</td>
+                <td>40%</td>
+            </tr>
+            <tr>
+                <th>Females</th>
+                <td>1.7</td>
+                <td>0.002</td>
+                <td>43%</td>
+            </tr>
+            <caption>A test Table with merged cells</caption>
+        </table>
+    </div>
+
+    <div>
+        <h2>5.Crazy Homework(Practise)</h2>
+
+        <table>
+            <tr>
+                <th rowspan="3">Day</th>
+                <th colspan="4" >Seminar</th>
+                
+            </tr>
+            <tr>
+                
+                <th colspan="2" >Schedule</th>
+                
+                <th rowspan="2">Topics</th>
+            </tr>
+            <tr>
+                
+                <th >Begin</th>
+                <th >End</th>
+                
+            </tr>
+            <tr>
+                <th rowspan="2">Monday</th>
+                <td rowspan="2"align="center">8:00 AM</td>
+                <td rowspan="2"align="center">5:00 PM</td>
+                <td align="center">Introduction to XML</td>
+            </tr>
+            <tr>
+               
+                
+                
+                <td align="center">Validity: DTH and Relax NG</td>
+            </tr>
+            <tr>
+                <th rowspan="4">Tuesday</th>
+                <td align="center">8:00 AM</td>
+                <td align="center">11:00 AM</td>
+                <td rowspan="2" align="center" style="padding: 6px;" >Xpath</td>
+            </tr>
+            <tr>
+                
+                <td rowspan="2" align="center">11:00 AM</td>
+                <td rowspan="2" align="center">2:00 PM</td>
+              
+            </tr>
+             <tr><td align="center" rowspan="2">XSL Transformations</td></tr>
+            <tr>
+               
+                
+                <td align="center">2:00 PM</td>
+                <td align="center">5:00 PM</td>
+                
+            </tr>
+            <tr>
+                <th >Wednesday</th>
+                <td align="center">8:00 AM</td>
+                <td align="center">12:00 PM</td>
+                <td align="center">XSL Formatting Objects</td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+
+</html>

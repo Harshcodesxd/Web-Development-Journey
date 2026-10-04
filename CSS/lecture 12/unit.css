@@ -1,0 +1,33 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+#wrapper{
+    /* width: 500px; */
+    height: 500px;
+    width: 50%;
+  /*   height: 50%; */
+  
+
+background-color: rgb(255, 143, 143);
+
+}
+p{
+    font-size: 4em;
+}
+ h1{
+    font-size:40px;
+}
+/* section{
+    width: 250px;
+    height: 250px;
+    background-color: rgb(111, 238, 238);
+} */
+span{
+       width: 40%;
+    height: 50%;
+    background-color: rgb(111, 238, 238);
+    display: inline-block;
+    
+}

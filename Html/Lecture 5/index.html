@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture 5</title>
+</head>
+
+<body style="background-color: rgb(255, 255, 255);">
+    <h1 style="color: rgb(25, 0, 255);">Lists : unordered,ordered and description list<h1>
+
+            <div>
+                <!-- unorderd list = ul 
+     The 4 Bullet Types
+     disc: Displays a solid, filled-in circle, his is the default browser setting.
+     circle: Displays a hollow, unfilled circle outline.
+     square: Displays a solid, filled-in square.none: Removes all bullet markers completely, which is useful for creating navigation bars -->
+
+                <ul type="circle">
+                    <li style="color: rgb(19, 230, 212);">Maggi</li>
+                    <li style="color: rgb(19, 230, 212);">tea leaves</li>
+                    <li style="color: rgb(19, 230, 212);">coffee</li>
+                    <li style="color: rgb(19, 230, 212);">soya panner</li>
+                    <li style="color: rgb(19, 230, 212);">atta</li>
+                </ul>
+
+                <!-- Ordered List
+    The available values for the type attribute are:
+    "1": Numbers (1, 2, 3...) – Default
+    "A": Uppercase letters (A, B, C...)
+    "a": Lowercase letters (a, b, c...)
+    "I": Uppercase Roman numerals (I, II, III...)
+    "i": Lowercase Roman numerals (i, ii, iii...) -->
+                <ol type="1" start="1">
+                    <li style="color: rgb(19, 230, 212);">Maggi</li>
+                    <li style="color: rgb(19, 230, 212);">tea leaves</li>
+                    <li style="color: rgb(19, 230, 212);">coffee</li>
+                    <li style="color: rgb(19, 230, 212);">soya panner</li>
+                    <li style="color: rgb(19, 230, 212);">atta</li>
+                </ol>
+            </div>
+
+            <div>
+                <dl>
+                    <dt style="color: rgb(255, 174, 0);">
+                        Terms and conditions
+                    </dt>
+                    <dd><span style="color: rgb(93, 238, 117);">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Voluptates dignissimos ullam, in eius perspiciatis ex consectetur, neque accusantium
+                            inventore at consequatur rem similique nam quis saepe repellendus iusto sed nulla?</span>
+                    </dd>
+                </dl>
+            </div>
+
+
+            <h2>Nested List</h2>
+
+            <ol>
+                <li>Fruits
+                    <ol>
+                        <li>Apple</li>
+                        <li>Cherry</li>
+                        <li>Mango</li>
+                    </ol>
+                </li>
+                <li>Vegetables
+                    <ol>
+                        <li>Cabbage</li>
+                        <li>Capsicum</li>
+                        <li>Carrot</li>
+                        <ul type="circle">
+                            <li>Green Carrot</li>
+                            <li>Yellow Carrot</li>
+                            <li> Carrot</li>
+                        </ul>
+                        </l>
+
+                    </ol>
+
+                </li>
+            </ol>
+
+            </div>
+            <h1>Preceding list</h1>
+            <div>
+                <ol type="I">
+                    <li>List Item 1
+                        <ol type="a">
+                            <li>Nested item 1.1</li>
+                            <li>Nested item 1.2</li>
+                        </ol>
+                    </li>
+                    <li>List Item 2
+                        <ol type="1">
+                            <li>Nested item 2.1</li>
+                            <li>Nested item 2.2
+                                <ul type="circle">
+                                    <li>Nested Item 2.2.1</li>
+                                    <li>Nested Item 2.2.2
+                                        <ul type=disc>
+                                            <li>Nested Item 2.2.2.1</li>
+                                            <li>Nested Item 2.2.2.2</li>
+                                        </ul>
+                                    </li>
+                                    <li>Nested Item 2.2.3</li>
+                                </ul>
+                        </ol>
+
+                    <li>List Item 3
+                        <ul type="disc">
+                            <li>Nested item 3.1</li>
+                            <li>Nested item 3.2</li>
+                            <li>Nested item 3.3</li>
+                        </ul>
+                </ol>
+            </div>
+
+
+
+
+
+
+
+</body>
+
+</html>
