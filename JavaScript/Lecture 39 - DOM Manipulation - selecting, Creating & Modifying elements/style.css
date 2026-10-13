@@ -7,3 +7,18 @@
     font-style: italic;
 
 }
+
+
+.singleProduct {
+    background-color: rgba(218, 54, 82, 0.664);
+    width: 200px;
+    padding: 40px;
+    border-radius: 40px;
+
+}
+
+.singleProduct img {
+    background-color:  rgba(218, 54, 82, 0.664);
+    width: 180px;
+    border-radius: 14px;
+}
