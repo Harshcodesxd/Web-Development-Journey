@@ -49,7 +49,7 @@
 // div.textContent = "Hello"
 // div2.textContent = "Div 2"
 
-// let body = document.querySelector("body")
+let body = document.querySelector("body")
 
 // body.appendChild(div)
 // body.appendChild(div2)
