@@ -1,13 +1,38 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
 
-    <script src="index.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <form action="" id="form">
+    <div>
+      <label for="username">Username</label>
+      <input type="text" name="" id="username" placeholder="Enter your Username" />
+    </div>
+    <div>
+      <label for="email">Email</label>
+      <input type="email" name="" id="email" placeholder="Enter your Email">
+    </div>
+    <div>
+      <label for="">Password</label>
+      <input type="password" id="password" placeholder="Enter your Password" />
+    </div>
+
+    <div>
+      <label for="bio">Bio :</label>
+      <textarea name="" id="bio" placeholder="Enter your Bio..."></textarea>
+      <p id="char-count">150 characters remaining</p>
+    </div>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <script src="index.js"></script>
+</body>
+
 </html>
