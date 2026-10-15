@@ -62,73 +62,73 @@ btn.addEventListener("click", fun1)
 
 const inpt = document.querySelector("#inpt")
 inpt.addEventListener("focus", (e) => {
-    // const value = e.target.value;
-    // console.log(value);
+    const value = e.target.value;
+    console.log(value);
 })
 inpt.addEventListener("blur", (e) => {
-    // const value = e.target.value;
-    // console.log(value);
+    const value = e.target.value;
+    console.log(value);
 })
 
 inpt.addEventListener("input", (e) => {
-    // const value = e.target.value;
-    // console.log(value);
+    const value = e.target.value;
+    console.log(value);
 })
 
 //q7
 
-// removeBtn.addEventListener("click", () => {
-//     btnTxt.textContent = ""
-//     btn.removeEventListener("click" , addText)
-// })
+removeBtn.addEventListener("click", () => {
+    btnTxt.textContent = ""
+    btn.removeEventListener("click" , addText)
+})
 
 
 //q8
 
-// btn.addEventListener("click", addText , {once : true})
+btn.addEventListener("click", addText , {once : true})
 
 
 // q9
 
-// document.querySelector("#parent").addEventListener("click", (e) => {
-//     e.stopPropagation() // this stops the event bubbling
-//     console.log("parent clicked");
-// })
+document.querySelector("#parent").addEventListener("click", (e) => {
+    e.stopPropagation() // this stops the event bubbling
+    console.log("parent clicked");
+})
 
-// document.querySelector("#button").addEventListener("click", (e) => {
-//     e.stopPropagation() // this stops the event bubbling
-//     console.log("button clicked");
-// })
+document.querySelector("#button").addEventListener("click", (e) => {
+    e.stopPropagation() // this stops the event bubbling
+    console.log("button clicked");
+})
 
 // q10 is same as q9
 
 
 // q11
 // dont use caputure
-// document.querySelector("#parent").addEventListener("click", (e) => {
-//     e.stopPropagation() // this stops the event bubbling
-//     console.log("parent clicked");
-// }, { capture: true })
+document.querySelector("#parent").addEventListener("click", (e) => {
+    e.stopPropagation() // this stops the event bubbling
+    console.log("parent clicked");
+}, { capture: true })
 
-// document.querySelector("#button").addEventListener("click", (e) => {
-//     e.stopPropagation() // this stops the event bubbling
-//     console.log("button clicked");
-// })
+document.querySelector("#button").addEventListener("click", (e) => {
+    e.stopPropagation() // this stops the event bubbling
+    console.log("button clicked");
+})
 
 
 // q12 
 
-// document.querySelector("#html").addEventListener("click" ,(e) => {
-//     console.log(e.target.textContent)
-// })
+document.querySelector("#html").addEventListener("click" ,(e) => {
+    console.log(e.target.textContent)
+})
 
-// document.querySelector("#css").addEventListener("click" ,(e) => {
-//     console.log(e.target.textContent)
-// })
+document.querySelector("#css").addEventListener("click" ,(e) => {
+    console.log(e.target.textContent)
+})
 
-// document.querySelector("#js").addEventListener("click" ,(e) => {
-//     console.log(e.target.textContent)
-// })
+document.querySelector("#js").addEventListener("click" ,(e) => {
+    console.log(e.target.textContent)
+})
 
 // solution of above problem - Event Delegation
 
