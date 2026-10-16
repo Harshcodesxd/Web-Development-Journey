@@ -13,20 +13,37 @@
     <div>
       <label for="username">Username</label>
       <input type="text" name="" id="username" placeholder="Enter your Username" />
+      <span class="error-message" style="color: red"></span>
     </div>
+
     <div>
       <label for="email">Email</label>
       <input type="email" name="" id="email" placeholder="Enter your Email" />
+      <span class="error-message" style="color: red"></span>
     </div>
+
     <div>
       <label for="">Password</label>
       <input type="password" id="password" placeholder="Enter your Password" />
+      <span class="error-message" style="color: red"></span>
     </div>
+    <p id="password-hint" class="hidden">Must be at least 8 characters</p>
 
     <div>
       <label for="bio">Bio :</label>
       <textarea name="" id="bio" placeholder="Enter your Bio..."></textarea>
       <p id="char-count">150 characters remaining</p>
+      <span class="error-message" style="color: red"></span>
+    </div>
+
+    <div>
+      <label for="country">Select your country :</label>
+      <select name="country" id="country">
+        <option value="india">INDIA</option>
+        <option value="usa">USA</option>
+        <option value="uk">UK</option>
+      </select>
+      <span class="error-message" style="color: red"></span>
     </div>
 
     <div>
@@ -36,6 +53,8 @@
 
     <button type="submit">Submit</button>
   </form>
+
+  <h1 class="hidden">Account Created Successfully 🎉</h1>
 
   <script src="index.js"></script>
 </body>
