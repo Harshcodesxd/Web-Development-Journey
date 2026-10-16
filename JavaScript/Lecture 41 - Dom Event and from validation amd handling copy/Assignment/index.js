@@ -73,6 +73,7 @@ form.addEventListener("submit", (e) => {
         return
     }
 
-    console.log({name : nameValue, email : email, password , skillList});
+    console.log({name : nameValue, email : email, password });
+
 })
 
