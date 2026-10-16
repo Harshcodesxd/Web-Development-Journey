@@ -32,6 +32,12 @@ todoForm.addEventListener("submit", (e) => {
     const todoValue = todoInput.value;
     todos.push(todoValue); // this for saving
 
+    let NewTodo = {
+        id: Date.now(),
+        text: todoValue,
+        isCompleted: false
+    }
+
     addTodo(todoValue);
 
     //   renderTodo()  // jab first time file exectue hogi tab existing todos render ho jayenge
@@ -54,9 +60,39 @@ function addTodo(todo) {
                 <input data-id = ${todo.id} type="checkbox">
                 <p class="flex-1">${todo.text}</p>
                 <div class="flex gap-3">
-                    <button data-id = ${todo.id}>Edit</button>
-                    <button data-id = ${todo.id}>Delete</button>
+                    <button data-action="edit" data-id = ${todo.id}>Edit</button>
+                    <button data-action="delete" data-id = ${todo.id}>Delete</button>
                 </div>
             </li>`;
     todoList.append(li); // ul -> li
 }
+
+
+// event delegation
+todoList.addEventListener('click', (e) => {
+
+    let btn = e.target.closest('button')
+    // console.log(btn?.dataset.action); // we used optional chaning '?' for avoding null
+    let action = btn?.dataset.action;
+    let id = btn?.dataset?.id;
+
+
+
+    if (action === "edit") {
+        // edit wala part krunga yha
+        console.log("editing...");
+    }
+
+    if (id === "delete") {
+        console.log("deleting...");
+
+        todos = todos.filter((todo) => {
+           if(todo.id !== Number(id)) {
+            return todo
+           }
+
+        })
+
+    }
+
+})
