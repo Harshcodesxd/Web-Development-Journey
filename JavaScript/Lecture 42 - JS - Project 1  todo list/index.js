@@ -1,3 +1,8 @@
+const todoForm = document.querySelector("#todo-form");
+const todoInput = document.querySelector("#todo-input");
+const todoList = document.querySelector("#todo-list");
+
+
 // 'Go to GYM', "Revision Web Dev", "Take class"
 let todos = [
     {
@@ -22,14 +27,11 @@ let todos = [
     }
 ];
 
-const todoForm = document.querySelector("#todo-form");
-const todoInput = document.querySelector("#todo-input");
-const todoList = document.querySelector("#todo-list");
 
 todoForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    const todoValue = todoInput.value.trim();
+    const todoValue = todoInput.value.trim(); // trim() for avoding blank task
 
     if (!todoValue) return; 
      // this for saving
@@ -61,9 +63,7 @@ function addTodo(todo) {
     // li.textContent = todo // <li> {actuall todo} </li> (added actuall todo in li)
     li.dataset.id = todo.id
     li.classList = `flex gap-2 border border-slate-300 p-4 rounded-xl`
-    li.innerHTML = `  
-                
-                <input data-action="toggle" data-id = "${todo.id}" ${todo.isCompleted === true ? 'checked' : ''} type="checkbox">
+    li.innerHTML = ` <input data-action="toggle" data-id = "${todo.id}" ${todo.isCompleted === true ? 'checked' : ''} type="checkbox">
         <p class="flex-1" > ${todo.text}</p>
             <div class="flex gap-3">
                 <button data-action="edit" data-id= ${todo.id}>Edit</button>
@@ -91,6 +91,8 @@ todoList.addEventListener('click', (e) => {
         // edit wala part krunga yha
         console.log("editing...");
     }
+
+
 
     if (action === "delete") {
         deleteTodo(e, id)
