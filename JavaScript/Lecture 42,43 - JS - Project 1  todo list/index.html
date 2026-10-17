@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-slate-100">
+    <div class="bg-white max-w-md mx-auto rounded-lg">
+        <div class="bg-indigo-500 p-5 rounded-2xl">
+            <h1 class="text-white font-semibold">Todo App</h1></div>
+<div>
+        <div class="p-5">
+        <form action="" class="flex gap-5" id="todo-form">
+                <input id="todo-input" type="text" class="flex-1 border border-black p-2" placeholder="Enter Task Description..." />
+                <button id="form-btn" class="text-white px-5 py-3 bg-indigo-500 rounded-lg">Add</button>
+        </form>
+        
+        <div class="flex justify-between pt-4 pb-1 text-xs border-b border-black">
+            <p>TASKS (1)</p>
+            <p>COMPLETED : 1</p>
+        </div>
+
+        <ul id="todo-list" class="py-3 flex flex-col gap-3">
+          <!--   <li data-id = "1" class="flex gap-2 border border-slate-300 p-4 rounded-xl">
+                <input data-id = "1" type="checkbox">
+                <p class="flex-1">Go to Gym</p>
+                <div class="flex gap-3">
+                    <button data-id = "1">Edit</button>
+                    <button data-id = "1">Delete</button>
+                </div>
+            </li> -->
+        </ul>
+<!-- <h1>DRAFT - 1</h1> -->
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
