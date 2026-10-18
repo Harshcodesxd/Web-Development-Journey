@@ -2,6 +2,8 @@ const todoForm = document.querySelector("#todo-form");
 const todoInput = document.querySelector("#todo-input");
 const todoList = document.querySelector("#todo-list");
 const formBtn = document.querySelector("#form-btn");
+const taskCount = document.querySelector("#task-count");
+const taskComplete = document.querySelector("#complete-count");
 
 
 // 'Go to GYM', "Revision Web Dev", "Take class"
@@ -34,6 +36,7 @@ todoForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
     const todoValue = todoInput.value.trim();
+
     if (!todoValue) return; // block empty tasks
 
     if (editTodoId) {
@@ -63,6 +66,7 @@ function renderTodo() {
     todos.forEach(function (todo) {
         addTodo(todo);
     });
+    updateCounts()
 }
 
 renderTodo()
@@ -74,15 +78,23 @@ function addTodo(todo) {
     li.dataset.id = todo.id // this is original method no jugad
 
     li.classList = `flex gap-2 border border-slate-300 p-4 rounded-xl`
-    li.innerHTML = ` <input data-action="toggle" data-id = "${todo.id}" ${todo.isCompleted === true ? 'checked' : ''} type="checkbox">
-        <p class="flex-1" > ${todo.text}</p>
+    li.innerHTML = ` <input  data-id = "${todo.id}" ${todo.isCompleted ? "checked" : ""} data-action="toggle" type="checkbox">
+         <p class="flex-1 ${todo.isCompleted ? "line-through text-red-400"  : "" } " > ${todo.text}</p>
             <div class="flex gap-3">
-                <button data-action="edit" data-id= ${todo.id}>Edit</button>
-                <button data-action="delete" data-id= ${todo.id}>Delete</button>
+                <button data-action="edit" data-id= "${todo.id}">Edit</button>
+                <button data-action="delete" data-id= "${todo.id}">Delete</button>
             </div>`
 
     todoList.append(li); // ul -> li
 
+  /*   taskCount.textContent = `TASKS (${todos.length})`
+    taskComplete.textContent = `COMPLETED:  (${todos.filter((todo) => todo.isCompleted).length})`
+   niche function m add kr diye h sab  */
+}
+
+function updateCounts() {
+    taskCount.textContent = `TASKS (${todos.length})`
+    taskComplete.textContent = `COMPLETED: (${todos.filter((todo) => todo.isCompleted).length})`
 }
 
 
@@ -92,10 +104,12 @@ todoList.addEventListener('click', (e) => {
 
     let li = e.target.closest('li')
     let btn = e.target.closest('button')
+    let actionEl = e.target.closest('[data-action]') // check krega closest action
+    let act = actionEl?.dataset.action;
     // console.log(btn?.dataset.action); // we used optional chaning '?' for avoding null
     let action = btn?.dataset.action;
     let id = li?.dataset?.id;
-    let checkbox = e.target.closest(`input[type = "checkbox"]`) // css selector to select only checkbox input element
+    // let checkbox = e.target.closest(`data-action`) // css selector to select only checkbox input element
     /* console.log(checkbox); */
 
 
@@ -109,9 +123,9 @@ todoList.addEventListener('click', (e) => {
         deleteTodo(e, id)
     }
 
-    if (checkbox) {
+    if (act === "toggle") { // act is capturing top button clip changed variables bit
         todos = todos.map((todo) => {
-            if (todo.id === Number(checkbox?.dataset?.id)) {
+            if (todo.id === Number(id)) {
                 return {
                     ...todo,
                     isCompleted: !todo.isCompleted
@@ -120,13 +134,16 @@ todoList.addEventListener('click', (e) => {
             return todo
         })
 
-    }
+        renderTodo()
 
+    }
+})
     function deleteTodo(e, id) { // deleting method
         e.target.closest('li').remove() // SELECTED WILL GET DELETED INSTEAD OF FULL LI REFRESH ON SINGLE DELETE
 
         todos = todos.filter((todo) => {
             if (todo.id !== Number(id)) {
+                 renderTodo() 
                 return todo
             }
         })
@@ -134,7 +151,7 @@ todoList.addEventListener('click', (e) => {
         // renderTodo() // ALL LI'S WILL REFRESH IF SOMEONE GET DELETED IT WILL MAKE THE PERFORMANCE SLOW IF THERE ARE 1LAKH TASKS
 
     }
-})
+
 
 function startEdit(id) {
     editTodoId = id
