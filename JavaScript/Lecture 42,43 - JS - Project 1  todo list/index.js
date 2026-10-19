@@ -36,10 +36,11 @@ todoForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
     const todoValue = todoInput.value.trim();
-
+formBtn.classList = "text-white px-5 py-3 bg-indigo-500 rounded-lg"
     if (!todoValue) return; // block empty tasks
 
     if (editTodoId) {
+        
         todos = todos.map((todo) =>
             todo.id === Number(editTodoId)
                 ? { ...todo, text: todoValue }
@@ -79,17 +80,17 @@ function addTodo(todo) {
 
     li.classList = `flex gap-2 border border-slate-300 p-4 rounded-xl`
     li.innerHTML = ` <input  data-id = "${todo.id}" ${todo.isCompleted ? "checked" : ""} data-action="toggle" type="checkbox">
-         <p class="flex-1 ${todo.isCompleted ? "line-through text-red-400"  : "" } " > ${todo.text}</p>
+         <p class="flex-1 ${todo.isCompleted ? "line-through text-red-400" : ""} " > ${todo.text}</p>
             <div class="flex gap-3">
-                <button data-action="edit" data-id= "${todo.id}">Edit</button>
+                <button  data-action="edit" data-id= "${todo.id}">Edit</button>
                 <button data-action="delete" data-id= "${todo.id}">Delete</button>
             </div>`
 
     todoList.append(li); // ul -> li
 
-  /*   taskCount.textContent = `TASKS (${todos.length})`
-    taskComplete.textContent = `COMPLETED:  (${todos.filter((todo) => todo.isCompleted).length})`
-   niche function m add kr diye h sab  */
+    /*   taskCount.textContent = `TASKS (${todos.length})`
+      taskComplete.textContent = `COMPLETED:  (${todos.filter((todo) => todo.isCompleted).length})`
+     niche function m add kr diye h sab  */
 }
 
 function updateCounts() {
@@ -110,7 +111,6 @@ todoList.addEventListener('click', (e) => {
     let action = btn?.dataset.action;
     let id = li?.dataset?.id;
     // let checkbox = e.target.closest(`data-action`) // css selector to select only checkbox input element
-    /* console.log(checkbox); */
 
 
 
@@ -120,7 +120,7 @@ todoList.addEventListener('click', (e) => {
 
 
     if (action === "delete") {
-        deleteTodo(e, id)
+        deleteTodo(id)
     }
 
     if (act === "toggle") { // act is capturing top button clip changed variables bit
@@ -138,30 +138,38 @@ todoList.addEventListener('click', (e) => {
 
     }
 })
-    function deleteTodo(e, id) { // deleting method
-        e.target.closest('li').remove() // SELECTED WILL GET DELETED INSTEAD OF FULL LI REFRESH ON SINGLE DELETE
+function deleteTodo(id) { // deleting method
+    //  id.target.closest('li').remove() // SELECTED WILL GET DELETED INSTEAD OF FULL LI REFRESH ON SINGLE DELETE
 
-        todos = todos.filter((todo) => {
-            if (todo.id !== Number(id)) {
-                 renderTodo() 
-                return todo
-            }
-        })
+if (editTodoId === id) resetForm();
+    todos = todos.filter((todo) => todo.id !== Number(id));
+    renderTodo();
 
-        // renderTodo() // ALL LI'S WILL REFRESH IF SOMEONE GET DELETED IT WILL MAKE THE PERFORMANCE SLOW IF THERE ARE 1LAKH TASKS
+    // renderTodo() // ALL LI'S WILL REFRESH IF SOMEONE GET DELETED IT WILL MAKE THE PERFORMANCE SLOW IF THERE ARE 1LAKH TASKS
 
-    }
+}
 
 
 function startEdit(id) {
     editTodoId = id
 
-    let currentTodo = todos.find((todo) => {
-        if (todo.id === Number(id)) { // finding which todo is clicked for edit
-            return todo
-        }
-    })
+    let currentTodo = todos.find((todo) => todo.id === Number(id));  // finding which todo is clicked for edit
+
 
     todoInput.value = currentTodo.text // input m add kr diya current todo found kr k
     formBtn.textContent = "Update"
+    formBtn.classList = "text-white px-5 py-3 bg-amber-600  rounded-lg"
+
 }
+
+function resetForm() { // restes form to default
+    editTodoId = null;
+    todoInput.value = "";
+    formBtn.textContent = "Add";
+    formBtn.classList = "text-white px-5 py-3 bg-indigo-500 rounded-lg";
+}
+
+document.querySelector("#cancel-edit").addEventListener("click", (e) => {
+    e.preventDefault();
+    resetForm();
+});
