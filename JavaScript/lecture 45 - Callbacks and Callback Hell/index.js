@@ -1,4 +1,4 @@
-
+// Always find from where code beggin instead get scared by looking at big code
 
 // function fun1(callback) {
 //     console.log("Hi");
@@ -23,11 +23,11 @@ function searchPizza(cb1) {
         console.log("Here is your Pizza Menu");
         let price = 500;
         cb1(price);
-    }, 1000) ;
+    }, 1000);
 
 }
 
-function addToCart(cb2){
+function addToCart(cb2) {
     console.log("Pizza adding to cart...");
     setTimeout(function () {
         console.log("Pizza Added to Cart");
@@ -36,7 +36,7 @@ function addToCart(cb2){
 }
 
 
-function payment(price,cb3) {
+function payment(price, cb3) {
     console.log(`Payment Initiated , Amount : ${price}`);
     setTimeout(function () {
         console.log(`Payment Completed, Amount : ${price}`);
@@ -44,10 +44,12 @@ function payment(price,cb3) {
     }, 4000)
 }
 
-searchPizza(function(price){
-    addToCart(function (){
+searchPizza(function (price) {
+    addToCart(function () {
         payment(price, function () {
-console.log("Just there");
+            console.log("Just there");
         })
     })
 });
+
+
