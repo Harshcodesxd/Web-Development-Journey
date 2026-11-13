@@ -32,3 +32,22 @@
 //     console.log("Ye Tho Hamesha Chalega");
 // })
 
+ 
+console.log("a");
+
+const p2 = new Promise(function f1(resolve, reject){
+    console.log("b");
+    resolve("Hello hogya")
+})
+
+p2.then(function f2(val) {
+    console.log("Then");
+    console.log(val);
+}).catch(function f3() {
+    console.log("Catch");
+}).finally(function f4(){
+    console.log("Finally");
+})
+
+console.log("C");
+   
