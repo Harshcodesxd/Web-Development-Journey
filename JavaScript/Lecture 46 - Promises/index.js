@@ -51,3 +51,23 @@ p2.then(function f2(val) {
 
 console.log("C");
    
+
+// event loop  ->   callback queue > micro task > macro task
+
+
+const p3 = new Promise(function f1(resolve,reject) {
+    resolve() // ye line sirf or sirf itna batati hai ki promise fulfill ho gaya thats it 
+})
+
+p3.then(function f3() {
+    console.log("f3 function");
+})
+
+setTimeout(function fun3() {
+    console.log("setTimeout");
+}, 2000)
+
+Promise.resolve().then(function f2() {
+    console.log("f2 function");
+})
+
