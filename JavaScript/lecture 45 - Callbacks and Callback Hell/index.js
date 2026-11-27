@@ -41,7 +41,7 @@ function payment(price, cb3) {
     setTimeout(function () {
         console.log(`Payment Completed, Amount : ${price}`);
         cb3()
-    }, 4000)
+    }, 4000) 
 }
 
 searchPizza(function (price) {

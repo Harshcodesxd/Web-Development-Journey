@@ -10,3 +10,5 @@ function fun1() {
 
 console.log(fun2()); // async function always returns a Promise
 console.log(fun1());// undefined kuch bhi nhi likha uper 
+
+
